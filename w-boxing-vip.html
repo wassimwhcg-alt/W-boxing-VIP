@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W Boxing VIP — Wajdi Said</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Bebas+Neue&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-dark: #8B6914;
+      --black: #0A0A0A;
+      --black-mid: #111111;
+      --black-card: #161616;
+      --white: #F5F0E8;
+      --grey: #888;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      overflow-x: hidden;
+    }
+
+    /* LANG TOGGLE */
+    .lang-toggle {
+      position: fixed;
+      top: 1.2rem;
+      right: 1.5rem;
+      z-index: 1000;
+      display: flex;
+      gap: 0.4rem;
+    }
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 0.3rem 0.7rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      font-family: 'Cairo', sans-serif;
+      transition: all 0.3s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to bottom, rgba(10,10,10,0.95), transparent);
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 6rem 2rem 4rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.05) 0%, transparent 50%),
+        linear-gradient(180deg, #0A0A0A 0%, #0d0d0d 100%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    }
+
+    .hero-badge {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 0.4rem 1.2rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      animation: fadeUp 1s ease both;
+    }
+
+    .hero-w {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(8rem, 20vw, 18rem);
+      line-height: 0.85;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(201,168,76,0.3);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      letter-spacing: -0.02em;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      letter-spacing: 0.15em;
+      line-height: 1;
+      animation: fadeUp 1s 0.2s ease both;
+    }
+
+    .hero-title span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--grey);
+      margin: 1.5rem 0 2.5rem;
+      letter-spacing: 0.05em;
+      animation: fadeUp 1s 0.4s ease both;
+      font-style: italic;
+    }
+
+    .hero-sub.ar {
+      font-family: 'Cairo', sans-serif;
+      font-style: normal;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background: var(--gold);
+      color: var(--black);
+      text-decoration: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      transition: all 0.3s;
+      animation: fadeUp 1s 0.6s ease both;
+    }
+    .hero-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(201,168,76,0.3);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      animation: fadeUp 1s 1s ease both;
+    }
+    .hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--grey);
+      text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s infinite;
+    }
+
+    /* CREDENTIALS */
+    .credentials {
+      padding: 5rem 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.1);
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      background: var(--black-mid);
+    }
+
+    .cred-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cred-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cred-icon {
+      font-size: 2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .cred-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+    }
+
+    .cred-sub {
+      font-size: 0.8rem;
+      color: var(--grey);
+      letter-spacing: 0.05em;
+    }
+
+    .cred-sub.ar {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    /* SECTION TITLE */
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      letter-spacing: 0.1em;
+      line-height: 1;
+    }
+
+    .section-title.ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    /* SERVICES */
+    .services {
+      padding: 6rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5px;
+      background: rgba(201,168,76,0.15);
+    }
+
+    .service-card {
+      background: var(--black-card);
+      padding: 3rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s;
+      cursor: pointer;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.06), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .service-card:hover::before { opacity: 1; }
+    .service-card:hover { transform: translateY(-4px); }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.4s;
+    }
+
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 4rem;
+      color: rgba(201,168,76,0.1);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .service-name.ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0;
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      color: var(--grey);
+      line-height: 1.7;
+    }
+
+    .service-desc.ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    .service-tag {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 0.3rem 0.8rem;
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 6rem 2rem;
+      background: var(--black-mid);
+    }
+
+    .about-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-box {
+      aspect-ratio: 3/4;
+      background: var(--black-card);
+      border: 1px solid rgba(201,168,76,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-box::before {
+      content: 'W';
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 15rem;
+      color: rgba(201,168,76,0.06);
+      position: absolute;
+    }
+
+    .about-corner {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-color: var(--gold);
+      border-style: solid;
+    }
+
+    .about-corner.tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+    .about-corner.tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+    .about-corner.bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+    .about-corner.br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+    .about-label {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+    }
+
+    .about-text .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.4em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .about-text h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      letter-spacing: 0.1em;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text h2.ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 2.2rem;
+      text-align: right;
+    }
+
+    .about-text p {
+      color: var(--grey);
+      line-height: 1.8;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p.ar {
+      font-family: 'Cairo', sans-serif;
+      text-align: right;
+      font-size: 0.95rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .stat {
+      border-left: 2px solid var(--gold);
+      padding-left: 1rem;
+    }
+
+    .stat.ar {
+      border-left: none;
+      border-right: 2px solid var(--gold);
+      padding-left: 0;
+      padding-right: 1rem;
+      text-align: right;
+    }
+
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--grey);
+      letter-spacing: 0.1em;
+    }
+
+    .stat-label.ar {
+      font-family: 'Cairo', sans-serif;
+    }
+
+    /* OFFER */
+    .offer {
+      padding: 6rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .offer-box {
+      border: 1px solid rgba(201,168,76,0.3);
+      padding: 4rem 3rem;
+      position: relative;
+      background: var(--black-card);
+    }
+
+    .offer-box::before {
+      content: 'VIP';
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 8rem;
+      color: rgba(201,168,76,0.04);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .offer-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .offer-title.ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
+
+    .offer-desc {
+      color: var(--grey);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .offer-desc.ar {
+      font-family: 'Cairo', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .offer-cta {
+      display: inline-block;
+      padding: 1.1rem 3.5rem;
+      background: transparent;
+      border: 2px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.25em;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .offer-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+      box-shadow: 0 0 40px rgba(201,168,76,0.3);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid rgba(201,168,76,0.1);
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--grey);
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(136,136,136,0.5);
+      letter-spacing: 0.1em;
+    }
+
+    .footer-ig {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+      transition: opacity 0.3s;
+    }
+
+    .footer-ig:hover { opacity: 0.7; }
+
+    /* DIVIDER */
+    .gold-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 300px;
+      margin: 2rem auto;
+    }
+
+    .gold-divider::before, .gold-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+
+    .gold-divider-icon {
+      color: var(--gold);
+      font-size: 0.8rem;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* RTL */
+    body.ar-active {
+      direction: rtl;
+    }
+
+    body.ar-active .stat {
+      border-left: none;
+      border-right: 2px solid var(--gold);
+      padding-left: 0;
+      padding-right: 1rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .about-inner { grid-template-columns: 1fr; }
+      .about-visual { display: none; }
+      .offer-box { padding: 2.5rem 1.5rem; }
+    }
+
+    /* HIDDEN LANG CONTENT */
+    .fr-content { display: block; }
+    .ar-content { display: none; }
+    body.ar-active .fr-content { display: none; }
+    body.ar-active .ar-content { display: block; }
+
+    /* INLINE LANG SPANS */
+    .fr-text { display: inline; }
+    .ar-text { display: none; }
+    body.ar-active .fr-text { display: none; }
+    body.ar-active .ar-text { display: inline; }
+  </style>
+</head>
+<body>
+
+  <!-- LANG TOGGLE -->
+  <div class="lang-toggle">
+    <button class="lang-btn active" id="btn-fr" onclick="setLang('fr')">FR</button>
+    <button class="lang-btn" id="btn-ar" onclick="setLang('ar')">عر</button>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="#">W BOXING VIP</a>
+    <ul class="nav-links">
+      <li><a href="#services" class="fr-text">Services</a><a href="#services" class="ar-text" style="font-family:'Cairo',sans-serif">الخدمات</a></li>
+      <li><a href="#about" class="fr-text">À Propos</a><a href="#about" class="ar-text" style="font-family:'Cairo',sans-serif">من نحن</a></li>
+      <li><a href="#contact" class="fr-text">Rejoindre</a><a href="#contact" class="ar-text" style="font-family:'Cairo',sans-serif">انضم إلينا</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-w">W</div>
+    <div class="hero-content">
+      <div class="hero-badge fr-content">Tunis · Coaching Privé VIP</div>
+      <div class="hero-badge ar-content" style="font-family:'Cairo',sans-serif">تونس · تدريب خاص VIP</div>
+
+      <h1 class="hero-title">
+        W BOXING<br><span>VIP</span>
+      </h1>
+
+      <p class="hero-sub fr-content">L'expérience ultra-privée. Par Wajdi Said.</p>
+      <p class="hero-sub ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">التجربة الخاصة الحصرية. مع وجدي سعيد.</p>
+
+      <a href="#services" class="hero-cta fr-content">Découvrir</a>
+      <a href="#services" class="hero-cta ar-content" style="font-family:'Cairo',sans-serif">اكتشف</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="credentials">
+    <div class="cred-grid">
+      <div class="cred-item">
+        <div class="cred-icon">⭐⭐</div>
+        <div class="cred-title">AIBA CERTIFIED</div>
+        <div class="cred-sub fr-content">Coach 2 Étoiles AIBA</div>
+        <div class="cred-sub ar-content" style="font-family:'Cairo',sans-serif">مدرب معتمد من AIBA نجمتين</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🥊</div>
+        <div class="cred-title fr-content">DIRECTEUR TECHNIQUE</div>
+        <div class="cred-title ar-content" style="font-family:'Cairo',sans-serif">المدير الفني</div>
+        <div class="cred-sub fr-content">Stade Tunisien — Boxe</div>
+        <div class="cred-sub ar-content" style="font-family:'Cairo',sans-serif">الملعب التونسي للملاكمة</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🎓</div>
+        <div class="cred-title">ISSEP</div>
+        <div class="cred-sub fr-content">Institut des Sports — Ksar Said</div>
+        <div class="cred-sub ar-content" style="font-family:'Cairo',sans-serif">المعهد العالي للرياضة — قصر سعيد</div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">🇹🇳</div>
+        <div class="cred-title fr-content">MINISTÈRE</div>
+        <div class="cred-title ar-content" style="font-family:'Cairo',sans-serif">الوزارة</div>
+        <div class="cred-sub fr-content">Jeunesse et des Sports</div>
+        <div class="cred-sub ar-content" style="font-family:'Cairo',sans-serif">وزارة الشباب والرياضة</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <span class="section-eyebrow fr-content">Ce que nous offrons</span>
+      <span class="section-eyebrow ar-content" style="font-family:'Cairo',sans-serif">ما نقدمه</span>
+      <h2 class="section-title fr-content">NOS PROGRAMMES</h2>
+      <h2 class="section-title ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">برامجنا التدريبية</h2>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Private -->
+      <div class="service-card">
+        <div class="service-number">01</div>
+        <div class="service-icon">🥊</div>
+        <div class="service-name fr-content">COACHING PRIVÉ</div>
+        <div class="service-name ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">التدريب الخاص</div>
+        <p class="service-desc fr-content">Un coaching sur-mesure dans notre studio ultra-privé. Attention exclusive. Résultats mesurables. Réservé aux profils sérieux.</p>
+        <p class="service-desc ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">تدريب شخصي مخصص في الاستوديو الخاص. اهتمام كامل ونتائج ملموسة. للجادين فقط.</p>
+        <span class="service-tag fr-content">Studio VIP</span>
+        <span class="service-tag ar-content" style="font-family:'Cairo',sans-serif">استوديو VIP</span>
+      </div>
+
+      <!-- Outdoor -->
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <div class="service-icon">🌍</div>
+        <div class="service-name fr-content">SÉANCES OUTDOOR</div>
+        <div class="service-name ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">جلسات خارجية</div>
+        <p class="service-desc fr-content">Entraînements en plein air, alliant conditionnement physique et technique de boxe. Intensité maximale, cadre ouvert.</p>
+        <p class="service-desc ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">تدريبات في الهواء الطلق تجمع بين اللياقة البدنية وتقنيات الملاكمة. شدة قصوى في بيئة مفتوحة.</p>
+        <span class="service-tag fr-content">En Plein Air</span>
+        <span class="service-tag ar-content" style="font-family:'Cairo',sans-serif">في الهواء الطلق</span>
+      </div>
+
+      <!-- Online -->
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <div class="service-icon">💻</div>
+        <div class="service-name fr-content">COACHING ONLINE</div>
+        <div class="service-name ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">التدريب عبر الإنترنت</div>
+        <p class="service-desc fr-content">Progressez depuis chez vous avec un programme personnalisé, des sessions vidéo et un suivi hebdomadaire.</p>
+        <p class="service-desc ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">تطور من منزلك مع برنامج مخصص وجلسات فيديو ومتابعة أسبوعية.</p>
+        <span class="service-tag fr-content">À Distance</span>
+        <span class="service-tag ar-content" style="font-family:'Cairo',sans-serif">عن بُعد</span>
+      </div>
+
+      <!-- Kids -->
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <div class="service-icon">👦</div>
+        <div class="service-name fr-content">BOXING KIDS</div>
+        <div class="service-name ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">ملاكمة الأطفال</div>
+        <p class="service-desc fr-content">Un programme spécialement conçu pour les enfants. Discipline, confiance en soi et technique dans un cadre sécurisé et bienveillant.</p>
+        <p class="service-desc ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">برنامج مصمم خصيصاً للأطفال. انضباط وثقة بالنفس وتقنية في بيئة آمنة وداعمة.</p>
+        <span class="service-tag fr-content">Dès 6 Ans</span>
+        <span class="service-tag ar-content" style="font-family:'Cairo',sans-serif">من سن 6 سنوات</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-visual">
+        <div class="about-box">
+          <div class="about-corner tl"></div>
+          <div class="about-corner tr"></div>
+          <div class="about-corner bl"></div>
+          <div class="about-corner br"></div>
+          <div class="about-label">WAJDI SAID</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow fr-content">Fondateur & Coach</span>
+        <span class="eyebrow ar-content" style="font-family:'Cairo',sans-serif;display:block;margin-bottom:1rem">المؤسس والمدرب</span>
+        <h2 class="fr-content">WAJDI<br>SAID</h2>
+        <h2 class="ar-content" style="font-family:'Cairo',sans-serif;font-size:2.2rem;direction:rtl;margin-bottom:1.5rem">وجدي سعيد</h2>
+        <p class="fr-content">Coach certifié 2 étoiles AIBA, directeur technique de la boxe au Stade Tunisien, diplômé de l'ISSEP Ksar Said et du Ministère de la Jeunesse et des Sports.</p>
+        <p class="ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">مدرب معتمد بنجمتين من AIBA، مدير فني للملاكمة في الملعب التونسي، خريج المعهد العالي للرياضة بقصر سعيد ووزارة الشباب والرياضة.</p>
+        <p class="fr-content">W Boxing VIP n'est pas une salle ordinaire. C'est une expérience ultra-privée pensée pour ceux qui veulent progresser sérieusement — sans compromis.</p>
+        <p class="ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">W Boxing VIP ليس صالة عادية. إنها تجربة خاصة حصرية مصممة لمن يريد التقدم الجاد — بلا تنازلات.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-num">★★</div>
+            <div class="stat-label fr-content">Certifié AIBA</div>
+            <div class="stat-label ar-content" style="font-family:'Cairo',sans-serif">معتمد AIBA</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">4</div>
+            <div class="stat-label fr-content">Programmes VIP</div>
+            <div class="stat-label ar-content" style="font-family:'Cairo',sans-serif">برامج VIP</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100%</div>
+            <div class="stat-label fr-content">Coaching Sur-Mesure</div>
+            <div class="stat-label ar-content" style="font-family:'Cairo',sans-serif">تدريب مخصص بالكامل</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">TN</div>
+            <div class="stat-label fr-content">Basé en Tunisie</div>
+            <div class="stat-label ar-content" style="font-family:'Cairo',sans-serif">مقرنا في تونس</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER / CTA -->
+  <section class="offer" id="contact">
+    <div class="section-header">
+      <span class="section-eyebrow fr-content">Rejoindre le programme</span>
+      <span class="section-eyebrow ar-content" style="font-family:'Cairo',sans-serif">انضم إلى البرنامج</span>
+    </div>
+    <div class="offer-box">
+      <h3 class="offer-title fr-content">PRÊT À COMMENCER ?</h3>
+      <h3 class="offer-title ar-content" style="font-family:'Cairo',sans-serif">هل أنت مستعد للبدء؟</h3>
+
+      <div class="gold-divider"><span class="gold-divider-icon">◆</span></div>
+
+      <p class="offer-desc fr-content">Places limitées. Coaching exclusif. Contactez-nous directement sur Instagram pour réserver votre première séance.</p>
+      <p class="offer-desc ar-content" style="font-family:'Cairo',sans-serif;direction:rtl">أماكن محدودة. تدريب حصري. تواصل معنا مباشرة على إنستغرام لحجز جلستك الأولى.</p>
+
+      <a href="https://www.instagram.com/w_boxingvip" target="_blank" class="offer-cta fr-content">📩 Nous Contacter</a>
+      <a href="https://www.instagram.com/w_boxingvip" target="_blank" class="offer-cta ar-content" style="font-family:'Cairo',sans-serif">📩 تواصل معنا</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">W BOXING VIP</span>
+    <a href="https://www.instagram.com/w_boxingvip" target="_blank" class="footer-ig">
+      📷 @w_boxingvip
+    </a>
+    <div class="footer-links">
+      <a href="#services" class="fr-text">Services</a>
+      <a href="#services" class="ar-text" style="font-family:'Cairo',sans-serif">الخدمات</a>
+      <a href="#about" class="fr-text">Coach</a>
+      <a href="#about" class="ar-text" style="font-family:'Cairo',sans-serif">المدرب</a>
+      <a href="#contact" class="fr-text">Contact</a>
+      <a href="#contact" class="ar-text" style="font-family:'Cairo',sans-serif">التواصل</a>
+    </div>
+    <p class="footer-copy">© 2025 W Boxing VIP · Wajdi Said · Tunisie</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const body = document.body;
+      const btnFr = document.getElementById('btn-fr');
+      const btnAr = document.getElementById('btn-ar');
+
+      if (lang === 'ar') {
+        body.classList.add('ar-active');
+        body.setAttribute('dir', 'rtl');
+        body.setAttribute('lang', 'ar');
+        btnAr.classList.add('active');
+        btnFr.classList.remove('active');
+      } else {
+        body.classList.remove('ar-active');
+        body.setAttribute('dir', 'ltr');
+        body.setAttribute('lang', 'fr');
+        btnFr.classList.add('active');
+        btnAr.classList.remove('active');
+      }
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card, .cred-item, .about-inner, .offer-box').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
