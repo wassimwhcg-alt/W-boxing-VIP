@@ -1,363 +1,302 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>W BOXING VIP | The Ultra-Private Studio Experience</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Space+Grotesk:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>W BOXING VIP | Elite Private Boxing Architecture</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "tertiary-container": "#b4b2b2",
-                        "inverse-primary": "#735c00",
-                        "background": "#121414",
-                        "on-background": "#e2e2e2",
-                        "on-primary": "#3c2f00",
-                        "on-primary-fixed-variant": "#574500",
-                        "error": "#ffb4ab",
-                        "surface-variant": "#333535",
-                        "on-secondary-fixed-variant": "#474646",
-                        "surface-tint": "#e9c349",
-                        "primary-fixed": "#ffe088",
-                        "error-container": "#93000a",
-                        "on-tertiary-container": "#454544",
-                        "surface-container": "#1e2020",
-                        "secondary": "#c9c6c5",
-                        "primary": "#f2ca50",
-                        "tertiary-fixed": "#e5e2e1",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-highest": "#333535",
-                        "on-tertiary-fixed": "#1c1b1b",
-                        "primary-container": "#d4af37",
-                        "outline-variant": "#4d4635",
-                        "on-secondary": "#313030",
-                        "surface": "#121414",
-                        "secondary-fixed-dim": "#c9c6c5",
-                        "inverse-on-surface": "#2f3131",
-                        "surface-dim": "#121414",
-                        "on-error": "#690005",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "surface-bright": "#37393a",
-                        "tertiary": "#d0cdcd",
-                        "on-secondary-container": "#bab8b7",
-                        "secondary-fixed": "#e5e2e1",
-                        "tertiary-fixed-dim": "#c8c6c5",
-                        "on-surface-variant": "#d0c5af",
-                        "outline": "#99907c",
-                        "secondary-container": "#4a4949",
-                        "surface-container-high": "#282a2b",
-                        "surface-container-lowest": "#0c0f0f",
-                        "on-tertiary-fixed-variant": "#474746",
-                        "on-primary-container": "#554300",
-                        "on-primary-fixed": "#241a00",
-                        "inverse-surface": "#e2e2e2",
-                        "on-surface": "#e2e2e2",
-                        "on-tertiary": "#313030",
-                        "primary-fixed-dim": "#e9c349",
-                        "surface-container-low": "#1a1c1c"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
+                        "background": "#0A0A0A",
+                        "surface-container": "#111212",
+                        "surface-container-high": "#161818",
+                        "primary": "#D4AF37",
+                        "on-primary": "#0A0A0A",
+                        "secondary": "#E2E2E2",
+                        "on-surface-variant": "#A8A8A8",
+                        "outline-variant": "rgba(212, 175, 55, 0.15)"
                     },
                     "spacing": {
                         "container-max": "1440px",
                         "margin-mobile": "20px",
-                        "gutter": "24px",
-                        "unit": "8px",
                         "margin-desktop": "80px",
-                        "section-gap": "160px"
+                        "section-gap": "140px"
                     },
                     "fontFamily": {
-                        "headline-md": ["Bebas Neue"],
-                        "headline-lg": ["Bebas Neue"],
-                        "headline-lg-mobile": ["Bebas Neue"],
-                        "label-sm": ["Space Grotesk"],
-                        "body-md": ["Space Grotesk"],
-                        "headline-xl": ["Bebas Neue"],
-                        "body-lg": ["Space Grotesk"]
-                    },
-                    "fontSize": {
-                        "headline-md": ["32px", {"lineHeight": "32px", "letterSpacing": "0.05em", "fontWeight": "400"}],
-                        "headline-lg": ["64px", {"lineHeight": "60px", "letterSpacing": "0.02em", "fontWeight": "400"}],
-                        "headline-lg-mobile": ["48px", {"lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "400"}],
-                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
-                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
-                        "headline-xl": ["120px", {"lineHeight": "100px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
-                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+                        "headline": ["Bebas Neue", "sans-serif"],
+                        "body": ["Space Grotesk", "sans-serif"]
                     }
                 },
             },
         }
     </script>
-<style>
-        body { background-color: #121414; color: #e2e2e2; overflow-x: hidden; }
-        .gold-glow:hover { box-shadow: 0 0 25px rgba(212, 175, 55, 0.4); }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    <style>
+        body { background-color: #0A0A0A; color: #E2E2E2; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
+        .gold-glow:hover { box-shadow: 0 0 35px rgba(212, 175, 55, 0.35); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .parallax-bg { background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; }
-        .luxury-gradient { background: linear-gradient(135deg, #121414 0%, #1a1a1a 100%); }
-        .gold-border-bottom { border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
-        .text-stroke { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1); color: transparent; }
+        .text-stroke { -webkit-text-stroke: 1px rgba(212, 175, 55, 0.1); color: transparent; }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background-color: #D4AF37; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
     </style>
 </head>
-<body class="font-body-md selection:bg-primary selection:text-on-primary">
-<!-- Top Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-xl border-b border-outline-variant/30 h-20">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full">
-<a class="text-headline-md font-headline-md text-primary tracking-widest" href="#">W BOXING VIP</a>
-<div class="hidden md:flex space-x-12">
-<a class="text-primary border-b-2 border-primary pb-1 font-label-sm" href="#experience">EXPERIENCE</a>
-<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-300" href="#founder">FOUNDER</a>
-<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-300" href="#tiers">TIERS</a>
-<a class="text-on-surface-variant font-label-sm hover:text-primary transition-colors duration-300" href="#lookbook">LOOKBOOK</a>
-</div>
-<button class="bg-primary text-on-primary font-headline-md px-8 py-2 hover:scale-95 transition-all duration-300 tracking-wider">REQUEST ACCESS</button>
-</div>
+<body class="selection:bg-primary selection:text-on-primary">
+
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/5 h-20 transition-all duration-300">
+    <div class="flex justify-between items-center max-w-container-max mx-auto px-6 md:px-20 h-full">
+        <a class="font-headline text-3xl text-primary tracking-[0.15em]" href="#">W BOXING VIP</a>
+        <div class="hidden md:flex space-x-12 tracking-[0.2em] text-xs font-bold">
+            <a class="nav-link text-primary transition-colors duration-300" href="#experience">EXPERIENCE</a>
+            <a class="nav-link text-on-surface-variant hover:text-white transition-colors duration-300" href="#founder">THE DIRECTOR</a>
+            <a class="nav-link text-on-surface-variant hover:text-white transition-colors duration-300" href="#tiers">ECOSYSTEMS</a>
+            <a class="nav-link text-on-surface-variant hover:text-white transition-colors duration-300" href="#lookbook">LOOKBOOK</a>
+        </div>
+        <a class="bg-primary text-on-primary font-headline text-lg px-6 py-2 hover:scale-95 transition-all duration-300 tracking-wider flex items-center justify-center" href="#access">REQUEST ACCESS</a>
+    </div>
 </nav>
+
 <main>
-<!-- Masterclass Hero -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" id="experience">
-<div class="absolute inset-0 z-0">
-<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background z-10"></div>
-<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast shot of a darkened luxury boxing studio. In the center, a single premium leather heavy bag hangs under a dramatic spotlight. The background features polished concrete floors and matte black walls with subtle gold architectural lighting. The mood is powerful, exclusive, and intensely focused, following the Shadow-Lux aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi6MyG1zev5C0_jjOLKPLa0KK9Bbhf2oOU2w-KGcOYxzKze7WtWftyBVR0d3U64fM4QUNJgJd_t9tZMA38XVaA87ftSZSDCxRYAlO4yzOOdYdnSZyMtz2MDwIJ2VNUJ90ybcxeZ_DuiclytfK5jJD3SgPSfU_qG3JCDVg7psaS5eUW8ZFcPZPKgotBpfk0IE_OsFULhdGmUQtaDHP7t5M4pl4a9rDH3-HILO3Nz42vjF4mB8G1RU8B9ACog4cTTWNdCsmaDKmltTI"/>
-</div>
-<div class="relative z-20 text-center px-margin-mobile max-w-4xl">
-<span class="font-label-sm text-primary tracking-[0.3em] block mb-6 reveal">BEYOND ATHLETICISM</span>
-<h1 class="font-headline-xl text-white mb-8 reveal" style="transition-delay: 200ms;">
-                    THE <span class="text-primary">ULTRA-PRIVATE</span><br/>STUDIO EXPERIENCE.
-                </h1>
-<p class="font-body-lg text-secondary mb-12 max-w-2xl mx-auto reveal" style="transition-delay: 400ms;">
-                    Elite Boxing Coaching by Wajdi Said. Precision-engineered training for high-performance individuals who demand absolute privacy and technical mastery.
-                </p>
-<div class="reveal" style="transition-delay: 600ms;">
-<a class="bg-primary text-on-primary font-headline-md text-headline-md px-12 py-4 gold-glow transition-all duration-500 inline-block" href="#access">
-                        REQUEST PRIVATE ACCESS
-                    </a>
-</div>
-</div>
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-<span class="material-symbols-outlined text-primary text-4xl">keyboard_double_arrow_down</span>
-</div>
-</section>
-<!-- Founder Profile -->
-<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto" id="founder">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-5 reveal">
-<div class="relative group">
-<div class="absolute -inset-2 border border-primary/20 transition-all duration-500 group-hover:inset-0"></div>
-<img class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional studio portrait of Coach Wajdi Said in a darkened environment. He is wearing high-end black athletic gear, looking towards the camera with an authoritative and expert gaze. The lighting is dramatic Chiaroscuro style, highlighting his focused expression and athletic build. The background is a textured deep charcoal gray with premium matte finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuzDVZuiXku3Nmj7zVM-7ewzAOBDCL1uvBtA6O3YSmOp0Qwuit0EC1Ggqzyfq9G6MIr_QjhEscB-XPvZNWOxNiuNgLV5V8S9la4oDAS5gZiHpnp27Eq48Kl1sws27gn-z7jGaSFpP_J5fJzxzB_rYIN33qDTazUg3GEq5PIlYJvHR_pu3BK1PkkN8j8SkbpsC_7Acf0GATQkheYvAbnxcen50l9cHTeviuMRM8iGALlAXIKCFnyY0uEM-7loNqGZUF7E6jhx9DGzg"/>
-<div class="absolute bottom-4 left-4 bg-background/80 backdrop-blur-md p-4 border-l-2 border-primary">
-<p class="font-headline-md text-white">WAJDI SAID</p>
-<p class="font-label-sm text-primary">MASTER COACH</p>
-</div>
-</div>
-</div>
-<div class="md:col-span-7 md:pl-20">
-<h2 class="font-headline-lg text-white mb-12 reveal">ARCHITECT OF <br/><span class="text-primary">ELITE PERFORMANCE</span></h2>
-<div class="space-y-12">
-<div class="flex items-start gap-6 reveal" style="transition-delay: 100ms;">
-<span class="material-symbols-outlined text-primary text-3xl">verified</span>
-<div>
-<h3 class="font-headline-md text-white leading-none mb-2 uppercase">AIBA Official Coach &amp; Expert</h3>
-<p class="font-body-md text-secondary">Internationally recognized certification representing the highest standard in technical boxing instruction and strategic coaching.</p>
-</div>
-</div>
-<div class="flex items-start gap-6 reveal" style="transition-delay: 200ms;">
-<span class="material-symbols-outlined text-primary text-3xl">trophy</span>
-<div>
-<h3 class="font-headline-md text-white leading-none mb-2 uppercase">Technical Director of Boxing</h3>
-<p class="font-body-md text-secondary">Overseeing elite programs at Stade Tunisien, developing the next generation of high-performance athletes through technical precision.</p>
-</div>
-</div>
-<div class="flex items-start gap-6 reveal" style="transition-delay: 300ms;">
-<span class="material-symbols-outlined text-primary text-3xl">architecture</span>
-<div>
-<h3 class="font-headline-md text-white leading-none mb-2 uppercase">Athletic Architecture</h3>
-<p class="font-body-md text-secondary">A bespoke methodology that treats the body as a structural masterpiece, optimizing movement through technical analysis and biomechanics.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Ecosystem Tiers -->
-<section class="bg-surface-container py-section-gap" id="tiers">
-<div class="px-margin-desktop max-w-container-max mx-auto">
-<div class="text-center mb-section-gap">
-<h2 class="font-headline-lg text-white reveal">SELECT YOUR <span class="text-primary">TRAINING ECOSYSTEM</span></h2>
-<div class="w-24 h-1 bg-primary mx-auto mt-6"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<!-- Tier 01 -->
-<div class="border border-outline-variant/30 p-12 bg-background hover:border-primary transition-all duration-500 reveal group">
-<span class="font-headline-md text-primary block mb-8">01</span>
-<h3 class="font-headline-md text-white mb-6 uppercase">Private Studio Training</h3>
-<p class="font-body-md text-secondary mb-12">One-on-one sessions in our hyper-exclusive facility. Zero distractions. Maximum technical evolution.</p>
-<ul class="space-y-4 mb-12 font-label-sm text-on-surface-variant">
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> BIOMETRIC ANALYSIS</li>
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> BESPOKE RECOVERY</li>
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> 24/7 CONCIERGE SUPPORT</li>
-</ul>
-<button class="w-full py-4 border border-primary text-primary font-headline-md tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">EXPLORE TIER</button>
-</div>
-<!-- Tier 02 -->
-<div class="border border-primary p-12 bg-surface-container-high relative reveal" style="transition-delay: 200ms;">
-<div class="absolute top-0 right-0 bg-primary text-on-primary px-4 py-1 font-label-sm">MOST EXCLUSIVE</div>
-<span class="font-headline-md text-primary block mb-8">02</span>
-<h3 class="font-headline-md text-white mb-6 uppercase">Outdoor Performance</h3>
-<p class="font-body-md text-secondary mb-12">Hybrid high-intensity sessions designed for elite conditioning in premium outdoor environments.</p>
-<ul class="space-y-4 mb-12 font-label-sm text-on-surface-variant">
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> ALTITUDE CONDITIONING</li>
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> AGILITY ARCHITECTURE</li>
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> GROUP SESSIONS (UPON INVITE)</li>
-</ul>
-<button class="w-full py-4 bg-primary text-on-primary font-headline-md tracking-widest gold-glow transition-all duration-300">EXPLORE TIER</button>
-</div>
-<!-- Tier 03 -->
-<div class="border border-outline-variant/30 p-12 bg-background hover:border-primary transition-all duration-500 reveal" style="transition-delay: 400ms;">
-<span class="font-headline-md text-primary block mb-8">03</span>
-<h3 class="font-headline-md text-white mb-6 uppercase">Elite Digital Architecture</h3>
-<p class="font-body-md text-secondary mb-12">Remote coaching for global clients. Tech-driven performance tracking and strategic oversight.</p>
-<ul class="space-y-4 mb-12 font-label-sm text-on-surface-variant">
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> VIDEO ANALYSIS</li>
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> NUTRITIONAL STRATEGY</li>
-<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> GLOBAL ACCESSIBILITY</li>
-</ul>
-<button class="w-full py-4 border border-primary text-primary font-headline-md tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300">EXPLORE TIER</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Lookbook Gallery -->
-<section class="py-section-gap overflow-hidden" id="lookbook">
-<div class="px-margin-desktop mb-20 flex justify-between items-end">
-<h2 class="font-headline-lg text-white reveal">STUDIO <span class="text-primary">AESTHETICS</span></h2>
-<p class="font-label-sm text-on-surface-variant mb-4 reveal">SCROLL TO EXPLORE THE FACILITY</p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-0 reveal">
-<div class="aspect-square relative group overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A macro shot of premium black leather boxing gloves with gold stitching, resting on a matte black wooden bench in a luxury gym. The lighting is moody and dramatic, focusing on the fine texture of the leather and the shine of the gold thread. The background is softly blurred, emphasizing the high-quality craftsmanship of the equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtPQZf0BJ4-W6wncX53SaccgsQ-jb9JQj1ftEOHvNVcgY8t3uJ86RnZYiXRRQLF4mdazF1KiqzfzN74zHJ-lpCZCT40qbuUnA-uQvnMDNO5kgumpeLHw2OJGGBb2F179F_MeN-kXW_5qr3_2YDk3RQABVlDJWZiRQTT5T8hrxM7pY5LqnHiKdAqoWbo0hViT697uQrt77Om1foXj1D4ztGk5Ch4XS7JSh--ZAslcWg0241mATDxlmCVjDg5HotwzvkI7IFG_ai_sk"/>
-</div>
-<div class="aspect-square relative group overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A wide shot of a modern, ultra-luxury private boxing ring. The canvas is black, and the ropes are wrapped in gold-colored premium synthetic leather. The lighting is recessed in the ceiling, creating a ring of light over the training area. The overall vibe is that of a private members' athletic sanctuary, quiet and prestigious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9uVetphKUnX8AXfqP6fPyRNPNtzPTtdmYwSkMCaepW2T7irxhZG5vg0Xxx92Hb_ZapwEOHe34vISTelH_p3rpCrQ2MGwpvMNFIIbzAop2V78QQeMdSlFibcgDutAj1PqOEhqRcdK4ccgF3WZKSQq3Yvm2y8y6uR1nNdOTvE-R0v9jASCx8moRu1lxuD4hmN13UlEercU0Lt33qvKg-bBm55XhFxt77SIiepPj3LSI-zQCOK75aqn23kpANKdeMUs-C3d8b0mXEcQ"/>
-</div>
-<div class="aspect-square relative group overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A focused shot of an athlete's hands being wrapped in professional-grade black hand wraps. The lighting highlights the intensity and preparation before a training session. The setting is a minimalist, dark studio with a subtle gold rim light outlining the hands and forearms, signifying power and readiness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFi0HPY47FA6UXjZs8jDFDAJS1HbzRbek8iFNESXGV446JLNFHJbHNCbql1IpOH2yioeUAQ5Ewo_Qna5u4mZJnNy3OVgIgFASeLPjbwOhuKUuvmP0fu5f8gVyQXoIqle4IS-zclXCebcD7L7MRHaaBuxVJxokMl_YkLmIlIoRAtk5GXigI_YXBFi7gKIhC9TOw_y1WWMREt2j85YF9FIng1x732M5YstXnnomUsa8DMA3x_yg3NC8i0gXuuSqm64_ul_s8RAMM4iI"/>
-</div>
-<div class="aspect-square relative group overflow-hidden">
-<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A silhouette of a trainer observing a session from the sidelines of a dark boxing gym. The only light source is a vertical gold LED strip on the wall, creating a futuristic and high-end atmosphere. The mood is observant, expert, and calculated, reflecting the AIBA official coaching standard of Wajdi Said." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBX28OfC82siJWd4lI61KwGFDe83bhjVSjb9IilWXMbA6drVN_bPPjGbDMxZFD0wZ_5XPF-U8rEQ9LPy7n0wo2cjMJLqQPRj-vnhtzY4iV_iORhb-JESrsevVeofQhKUUVokbO3X_xvSHBRpy4OwZ8A_xfVj0wjvmZDSgAtrSOFGI0f9mSCx9KiG8BK0ThszqzOA6zfrgqxVQDMViXguksNKOQmj_6jb75oz0qg5tEtTCjKD62zoaleDadfyFVVYNmFLH424DoXKI"/>
-</div>
-</div>
-</section>
-<!-- Access Form -->
-<section class="py-section-gap bg-background relative overflow-hidden" id="access">
-<div class="absolute -top-40 -right-40 text-[300px] font-headline-xl text-stroke pointer-events-none select-none">ACCESS</div>
-<div class="px-margin-desktop max-w-2xl mx-auto relative z-10">
-<div class="text-center mb-16 reveal">
-<h2 class="font-headline-lg text-white mb-4">PRIVILEGED <span class="text-primary">ACCESS</span></h2>
-<p class="font-body-md text-secondary">Membership is strictly limited to ensure individualized attention. Apply for a private consultation.</p>
-</div>
-<form class="space-y-12 reveal">
-<div class="relative group">
-<label class="font-label-sm text-primary uppercase block mb-2 opacity-60 transition-opacity group-focus-within:opacity-100">Full Name</label>
-<input class="w-full bg-transparent border-0 border-b border-outline hover:border-white focus:border-primary focus:ring-0 transition-all text-white py-4 font-body-md" placeholder="MR. JAMES SMITH" type="text"/>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<div class="relative group">
-<label class="font-label-sm text-primary uppercase block mb-2 opacity-60 transition-opacity group-focus-within:opacity-100">Electronic Mail</label>
-<input class="w-full bg-transparent border-0 border-b border-outline hover:border-white focus:border-primary focus:ring-0 transition-all text-white py-4 font-body-md" placeholder="CLIENT@COMPANY.COM" type="email"/>
-</div>
-<div class="relative group">
-<label class="font-label-sm text-primary uppercase block mb-2 opacity-60 transition-opacity group-focus-within:opacity-100">Tier of Interest</label>
-<select class="w-full bg-transparent border-0 border-b border-outline hover:border-white focus:border-primary focus:ring-0 transition-all text-white py-4 font-body-md appearance-none">
-<option class="bg-background">PRIVATE STUDIO</option>
-<option class="bg-background">OUTDOOR PERFORMANCE</option>
-<option class="bg-background">DIGITAL ARCHITECTURE</option>
-</select>
-</div>
-</div>
-<div class="relative group">
-<label class="font-label-sm text-primary uppercase block mb-2 opacity-60 transition-opacity group-focus-within:opacity-100">Performance Objective</label>
-<textarea class="w-full bg-transparent border-0 border-b border-outline hover:border-white focus:border-primary focus:ring-0 transition-all text-white py-4 font-body-md resize-none" placeholder="DESCRIBE YOUR ATHLETIC GOALS..." rows="4"></textarea>
-</div>
-<button class="w-full bg-primary text-on-primary font-headline-md text-headline-md py-6 gold-glow transition-all duration-500 hover:scale-[0.98]" type="submit">
-                        SUBMIT APPLICATION
-                    </button>
-<p class="text-center font-label-sm text-on-surface-variant">YOUR PRIVACY IS OUR HIGHEST PRIORITY. ALL DATA IS ENCRYPTED AND CONFIDENTIAL.</p>
-</form>
-</div>
-</section>
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" id="experience">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10"></div>
+            <img class="w-full h-full object-cover brightness-[0.35] scale-105 transform origin-center transition-transform duration-[2000ms]" alt="W Boxing VIP Studio View" src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1200&auto=format&fit=crop"/>
+        </div>
+        <div class="relative z-20 text-center px-4 max-w-5xl">
+            <span class="text-xs font-bold text-primary tracking-[0.4em] block mb-6 uppercase reveal">BEYOND COMMERCIAL TRAININGS</span>
+            <h1 class="font-headline text-6xl md:text-9xl text-white mb-6 tracking-wide leading-none reveal" style="transition-delay: 150ms;">
+                THE <span class="text-primary">ULTRA-PRIVATE</span><br/>STUDIO ECOSYSTEM.
+            </h1>
+            <p class="text-base md:text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto font-light reveal" style="transition-delay: 300ms;">
+                High-performance physical architecture engineered exclusively by Coach Wajdi Said for executives, athletes, and high-achievers.
+            </p>
+            <div class="reveal" style="transition-delay: 450ms;">
+                <a class="bg-primary text-on-primary font-headline text-xl px-10 py-4 gold-glow transition-all duration-500 inline-block tracking-widest" href="#access">
+                    APPLY FOR PRIVATE ACCESS
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+            <span class="material-symbols-outlined text-primary text-3xl">keyboard_double_arrow_down</span>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 md:px-20 max-w-container-max mx-auto" id="founder">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5 reveal">
+                <div class="relative group">
+                    <div class="absolute -inset-2 border border-primary/20 transition-all duration-500 group-hover:inset-0"></div>
+                    <img class="w-full h-[600px] object-cover border border-white/10 transition-all duration-700" alt="Coach Wajdi Said Profile" src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop"/>
+                    <div class="absolute bottom-4 left-4 right-4 bg-background/95 backdrop-blur-md p-5 border-l-2 border-primary">
+                        <p class="font-headline text-2xl text-white tracking-widest">WAJDI SAID</p>
+                        <p class="text-xs font-bold text-primary uppercase tracking-[0.2em] mt-1">Founder & Technical Expert</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-7 md:pl-16">
+                <span class="text-xs font-bold text-primary tracking-[0.3em] block mb-4 uppercase reveal">MASTERCLASS DIRECTORY</span>
+                <h2 class="font-headline text-5xl md:text-7xl text-white mb-12 tracking-wide leading-none reveal">
+                    ARCHITECT OF <br/><span class="text-primary">HIGH-PERFORMANCE</span>
+                </h2>
+                <div class="space-y-10">
+                    <div class="flex items-start gap-6 reveal" style="transition-delay: 100ms;">
+                        <span class="material-symbols-outlined text-primary text-3xl mt-1">verified</span>
+                        <div>
+                            <h3 class="font-headline text-2xl text-white tracking-wider mb-2 uppercase">AIBA Official Coach & Expert</h3>
+                            <p class="text-on-surface-variant font-light text-sm leading-relaxed">Formally accredited on the international matrix for elite Olympic-tier boxing development, tactical movement architecture, and sports science mapping.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 reveal" style="transition-delay: 200ms;">
+                        <span class="material-symbols-outlined text-primary text-3xl mt-1">workspace_premium</span>
+                        <div>
+                            <h3 class="font-headline text-2xl text-white tracking-wider mb-2 uppercase">Technical Boxing Director (Stade Tunisien)</h3>
+                            <p class="text-on-surface-variant font-light text-sm leading-relaxed">Directorial authority governing competitive structural athletics, tactical combat systems, and physical conditioning workflows for high-tier sport clubs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-6 reveal" style="transition-delay: 300ms;">
+                        <span class="material-symbols-outlined text-primary text-3xl mt-1">fitness_center</span>
+                        <div>
+                            <h3 class="font-headline text-2xl text-white tracking-wider mb-2 uppercase">Bespoke Studio Blueprint</h3>
+                            <p class="text-on-surface-variant font-light text-sm leading-relaxed">A metrics-driven, elite training environment that completely completely avoids general gym trends, focusing solely on precision physical development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-surface-container py-32" id="tiers">
+        <div class="px-6 md:px-20 max-w-container-max mx-auto">
+            <div class="text-center mb-24">
+                <span class="text-xs font-bold text-primary tracking-[0.3em] block mb-4 uppercase reveal">ELITE CHANNELS</span>
+                <h2 class="font-headline text-5xl md:text-6xl text-white tracking-wide reveal">SELECT YOUR BLUEPRINT</h2>
+                <div class="w-16 h-[2px] bg-primary mx-auto mt-6"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="border border-white/5 p-10 bg-background hover:border-primary/40 transition-all duration-500 reveal group">
+                    <span class="font-headline text-4xl text-primary block mb-6">01</span>
+                    <h3 class="font-headline text-2xl text-white mb-4 tracking-wide uppercase">Private Studio Training</h3>
+                    <p class="text-sm text-on-surface-variant mb-10 font-light leading-relaxed">Hyper-calibrated 1-on-1 performance and athletic technique optimization inside our entirely private, black-tier training facility.</p>
+                    <ul class="space-y-4 mb-10 text-xs text-secondary/80 font-medium tracking-wider">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> ADVANCED BIOMECHANIC SCREENING</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> REAL-TIME KINETIC FEEDBACK</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> EXCLUSIVE LOUNGE BOOKINGS</li>
+                    </ul>
+                    <a class="w-full py-4 block text-center border border-primary/40 text-primary font-headline tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300 text-sm" href="#access">REQUEST DISCOVERY</a>
+                </div>
+                <div class="border border-primary p-10 bg-surface-container-high relative reveal" style="transition-delay: 150ms;">
+                    <div class="absolute -top-3 right-6 bg-primary text-on-primary text-[10px] font-bold tracking-widest px-4 py-1 uppercase">MAXIMUM SCALING</div>
+                    <span class="font-headline text-4xl text-primary block mb-6">02</span>
+                    <h3 class="font-headline text-2xl text-white mb-4 tracking-wide uppercase">Outdoor Performance</h3>
+                    <p class="text-sm text-on-surface-variant mb-10 font-light leading-relaxed">High-intensity cardiovascular mechanics, elite functional speed, and extreme conditioning models deployed across upscale environments.</p>
+                    <ul class="space-y-4 mb-10 text-xs text-secondary/80 font-medium tracking-wider">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> AEROBIC METRIC MAXIMIZATION</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> PLYOMETRICS & IMPACT DRILLS</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> PERFORMANCE ROADWORK SESSIONS</li>
+                    </ul>
+                    <a class="w-full py-4 block text-center bg-primary text-on-primary font-headline tracking-widest gold-glow transition-all duration-300 text-sm" href="#access">REQUEST DISCOVERY</a>
+                </div>
+                <div class="border border-white/5 p-10 bg-background hover:border-primary/40 transition-all duration-500 reveal">
+                    <span class="font-headline text-4xl text-primary block mb-6">03</span>
+                    <h3 class="font-headline text-2xl text-white mb-4 tracking-wide uppercase">Elite Digital Architecture</h3>
+                    <p class="text-sm text-on-surface-variant mb-10 font-light leading-relaxed">Full technical programming, bespoke remote schedules, and continuous diagnostic video reviews for global executives.</p>
+                    <ul class="space-y-4 mb-10 text-xs text-secondary/80 font-medium tracking-wider">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> FRAME-BY-FRAME VIDEOGRAPHIC ANALYSIS</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> TAILORED NUTRITIONAL Blueprints</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary"></span> ON-DEMAND CHANNELS WITH COACH WAJDI</li>
+                    </ul>
+                    <a class="w-full py-4 block text-center border border-primary/40 text-primary font-headline tracking-widest hover:bg-primary hover:text-on-primary transition-all duration-300 text-sm" href="#access">REQUEST DISCOVERY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32" id="lookbook">
+        <div class="px-6 md:px-20 mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+                <span class="text-xs font-bold text-primary tracking-[0.3em] block mb-3 uppercase reveal">THE STUDIO ENVIRONMENT</span>
+                <h2 class="font-headline text-5xl md:text-6xl text-white tracking-wide reveal">TECHNICAL CAPABILITIES</h2>
+            </div>
+            <p class="text-xs font-bold text-on-surface-variant tracking-[0.2em] uppercase reveal">HIGH CONTRAST / ZERO EXCLUSIONS</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 px-2 reveal">
+            <div class="aspect-square relative group overflow-hidden bg-surface-container border border-white/5">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale contrast-125 hover:grayscale-0" alt="W Boxing VIP Mitt-work" src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=500&auto=format&fit=crop"/>
+            </div>
+            <div class="aspect-square relative group overflow-hidden bg-surface-container border border-white/5">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale contrast-125 hover:grayscale-0" alt="W Boxing VIP Conditioning" src="https://images.unsplash.com/photo-1516239482977-b552ba725603?q=80&w=500&auto=format&fit=crop"/>
+            </div>
+            <div class="aspect-square relative group overflow-hidden bg-surface-container border border-white/5">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale contrast-125 hover:grayscale-0" alt="W Boxing VIP Technical Training" src="https://images.unsplash.com/photo-1544033527-b192daee1f5b?q=80&w=500&auto=format&fit=crop"/>
+            </div>
+            <div class="aspect-square relative group overflow-hidden bg-surface-container border border-white/5">
+                <img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 filter grayscale contrast-125 hover:grayscale-0" alt="W Boxing VIP Studio Sign" src="https://images.unsplash.com/photo-1626245940576-905ff399caec?q=80&w=500&auto=format&fit=crop"/>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-background relative overflow-hidden" id="access">
+        <div class="absolute -top-24 -right-24 text-[260px] font-headline text-stroke pointer-events-none select-none">VIP</div>
+        <div class="px-6 md:px-20 max-w-3xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-5xl md:text-7xl text-white mb-4 tracking-wide">PRIVILEGED APPLICATION</h2>
+                <p class="text-sm text-on-surface-variant font-light max-w-md mx-auto leading-relaxed">Enrollment is strictly capped quarterly to maintain elite bespoke programming. Submit your onboarding summary.</p>
+            </div>
+            <form class="space-y-10 reveal" onsubmit="event.preventDefault(); alert('Application Briefing Transmitted. Discretion Guaranteed.');">
+                <div class="relative">
+                    <label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block mb-1">Full Name</label>
+                    <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 transition-all text-white py-3 px-0 font-light placeholder:text-white/10 text-sm" placeholder="E.G. CHEDLY BEN ALI" type="text" required/>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block mb-1">Secure Contact Email</label>
+                        <input class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 transition-all text-white py-3 px-0 font-light placeholder:text-white/10 text-sm" placeholder="CLIENT@SECURED-DOMAIN.COM" type="email" required/>
+                    </div>
+                    <div>
+                        <label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block mb-1">Ecosystem Target</label>
+                        <select class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 transition-all text-white py-3 px-0 font-light text-sm appearance-none">
+                            <option class="bg-surface-container">PRIVATE STUDIO TIERS (1-ON-1)</option>
+                            <option class="bg-surface-container">OUTDOOR PERFORMANCE</option>
+                            <option class="bg-surface-container">ELITE DIGITAL ARCHITECTURE</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block mb-1">Performance Matrix & Objectives</label>
+                    <textarea class="w-full bg-transparent border-0 border-b border-white/20 focus:border-primary focus:ring-0 transition-all text-white py-3 px-0 font-light placeholder:text-white/10 text-sm resize-none" placeholder="OUTLINE YOUR PHYSICAL DEVELOPMENT PATHWAYS, MEDICAL METRICS, AND TARGET TIMELINES..." rows="3" required></textarea>
+                </div>
+                <button class="w-full bg-primary text-on-primary font-headline text-xl py-5 gold-glow transition-all duration-500 hover:scale-[0.99] tracking-widest" type="submit">
+                    SUBMIT BRIEFING REQUISITION
+                </button>
+                <p class="text-center text-[10px] tracking-wider text-on-surface-variant/60 uppercase">Absolute privacy configurations and scheduling discretion guaranteed.</p>
+            </form>
+        </div>
+    </section>
 </main>
-<!-- Footer -->
-<footer class="w-full py-section-gap border-t border-outline-variant/20 bg-background">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="flex flex-col md:flex-row justify-between items-center space-y-unit md:space-y-0">
-<div class="flex flex-col items-center md:items-start">
-<span class="text-headline-md font-headline-md text-primary">W BOXING VIP</span>
-<p class="font-label-sm text-on-secondary-container mt-2">© 2024 W BOXING VIP. ALL RIGHTS RESERVED.</p>
-<p class="font-label-sm text-on-secondary-container opacity-50">PRIVATE MEMBERS ONLY.</p>
-</div>
-<div class="flex flex-col md:flex-row gap-12 text-center md:text-right">
-<div class="space-y-2">
-<p class="font-label-sm text-primary mb-4">NAVIGATE</p>
-<a class="block font-label-sm text-on-secondary-container hover:text-primary transition-opacity" href="#experience">PRIVACY</a>
-<a class="block font-label-sm text-on-secondary-container hover:text-primary transition-opacity" href="#founder">TERMS</a>
-<a class="block font-label-sm text-on-secondary-container hover:text-primary transition-opacity" href="#tiers">COACH WAJDI SAID</a>
-</div>
-<div class="space-y-2">
-<p class="font-label-sm text-primary mb-4">SOCIAL</p>
-<a class="block font-label-sm text-on-secondary-container hover:text-primary transition-opacity" href="#">INSTAGRAM</a>
-<a class="block font-label-sm text-on-secondary-container hover:text-primary transition-opacity" href="#">LINKEDIN</a>
-</div>
-</div>
-</div>
-</div>
+
+<footer class="w-full py-20 border-t border-white/5 bg-background">
+    <div class="max-w-container-max mx-auto px-6 md:px-20">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="text-center md:text-left">
+                <span class="font-headline text-3xl text-primary tracking-widest">W BOXING VIP</span>
+                <p class="text-[10px] tracking-wider text-on-surface-variant mt-2">© 2026 W BOXING VIP. ALL METRIC AND INTELLECTUAL RIGHTS RESERVED.</p>
+            </div>
+            <div class="flex gap-16 text-xs font-bold tracking-[0.2em] text-right">
+                <div class="space-y-3">
+                    <p class="text-primary text-[10px] mb-2 tracking-[0.3em]">STUDIO STRATEGY</p>
+                    <a class="block text-on-surface-variant hover:text-white transition-colors" href="#experience">PRIVACY STANDARDS</a>
+                    <a class="block text-on-surface-variant hover:text-white transition-colors" href="#founder">DIRECTOR WAJDI SAID</a>
+                </div>
+                <div class="space-y-3">
+                    <p class="text-primary text-[10px] mb-2 tracking-[0.3em]">CHANNELS</p>
+                    <a class="block text-on-surface-variant hover:text-white transition-colors" href="https://www.instagram.com/w_boxingvip/" target="_blank">INSTAGRAM</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+
 <script>
-        // Simple Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Smooth scroll implementation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('h-16');
-                nav.classList.remove('h-20');
-            } else {
-                nav.classList.add('h-20');
-                nav.classList.remove('h-16');
+    // Premium Intersection Observer implementation for smooth loading animations
+    const observerOptions = { threshold: 0.15 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
             }
         });
-    </script>
-</body></html>
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Dynamic Navigation behavior on scrolling interactions
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 60) {
+            nav.classList.add('h-16', 'bg-background/95');
+            nav.classList.remove('h-20', 'bg-background/80');
+        } else {
+            nav.classList.add('h-20', 'bg-background/80');
+            nav.classList.remove('h-16', 'bg-background/95');
+        }
+    });
+
+    // Smooth scroll navigation anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
